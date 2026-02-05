@@ -1,0 +1,8 @@
+class Bank { 
+  private Counter[] counters;
+
+  public Bank(int numOfCounters){
+    counters = new Counter[numOfCounters];
+    
+    for(int i = 0; i < numOfCounters; i = i + 1) {
+      counters[i] = new Counter;

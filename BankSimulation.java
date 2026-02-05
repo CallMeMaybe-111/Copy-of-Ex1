@@ -40,7 +40,7 @@ class BankSimulation extends Simulation {
     while (sc.hasNextDouble()) {
       double arrivalTime = sc.nextDouble();
       double serviceTime = sc.nextDouble();
-      initEvents[id] = new BankEvent(BankEvent.ARRIVAL, arrivalTime, id, serviceTime, available);
+      initEvents[id] = new Arrival(new Customer(id), arrivalTime); //creating an array with the size of no. of customer & put the event Arrival inside -> contains Customer w ID and their arrival time
       id += 1;
     }
   }
